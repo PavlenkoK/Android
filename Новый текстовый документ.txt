@@ -1,0 +1,156 @@
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test (Vetka)
+$ git init
+Initialized empty Git repository in C:/Users/325-01 Í/Desktop/test/.git/
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test (master)
+$ git remote https://github.com/PavlenkoK/TestRepo.git
+error: Unknown subcommand: https://github.com/PavlenkoK/TestRepo.git
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test (master)
+$ git clone https://github.com/PavlenkoK/TestRepo.git^C
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test (master)
+$ git clone https://github.com/PavlenkoK/TestRepo.git
+Cloning into 'TestRepo'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test (master)
+$ cd TestRepo
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (main)
+$ git add .
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (main)
+$ git checkout -b develop
+Switched to a new branch 'develop'
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (develop)
+$ git status
+On branch develop
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (develop)
+$ git commit -m "Added index html"
+Author identity unknown
+
+*** Please tell me who you are.
+
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got '325-01 Í@DESKTOP-G2U23T9.(none)')
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (develop)
+$ git push origin develop
+info: please complete authentication in your browser...
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/PavlenkoK/TestRepo/pull/new/develop
+remote:
+To https://github.com/PavlenkoK/TestRepo.git
+ * [new branch]      develop -> develop
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (develop)
+$ git status
+On branch develop
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (develop)
+$ git commit -m "Added index html"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got '325-01 Í@DESKTOP-G2U23T9.(none)')
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (develop)
+$ git config --global user.email "you@example.com"^C
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (develop)
+$ git config --global user.email "you@example.com"
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (develop)
+$ git config --global user.name "Your Name"
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (develop)
+$ git commit -m "Added index html"
+[develop dbd0be4] Added index html
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (develop)
+$ git push origin develop
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 465 bytes | 465.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PavlenkoK/TestRepo.git
+   f4323df..dbd0be4  develop -> develop
+
+325-01 Í@DESKTOP-G2U23T9 MINGW64 ~/Desktop/test/TestRepo (develop)
+$
